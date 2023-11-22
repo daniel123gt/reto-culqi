@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 300;
+        src: url("../fonts/Manrope/Manrope-Light.ttf")
+            format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 400;
+        src: url("../fonts/Manrope/Manrope-Regular.ttf")
+            format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 500;
+        src: url("../fonts/Manrope/Manrope-Medium.ttf")
+            format("truetype");
+        font-display: swap;
+    }
+    @font-face {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 600;
+      src: url("../fonts/Manrope/Manrope-SemiBold.ttf")
+          format("truetype");
+      font-display: swap;
+  }
+    @font-face {
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 700;
+        src: url("../fonts/Manrope/Manrope-Bold.ttf")
+            format("truetype");
+        font-display: swap;
+    }
+}
+
+:root{
+    --color-grayscale-900: #111827;
+    --color-grayscale-600: #687588;
+    --color-grayscale-500: #A0AEC0;
+    --color-grayscale-300: #E9EAEC;
+    --color-grayscale-100: #F8F8F8;
+    --color-grayscale-50: #FAFAFA;
+
+    --color-alerts-error-base: #E03137;
+
+    --color-primary-base: #27A376;
+
+    --color-others-blue: #2F78EE;
+}
+
+*{
+    @apply font-manrope;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-gray-back);
+}

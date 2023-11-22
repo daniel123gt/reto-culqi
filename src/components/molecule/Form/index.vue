@@ -4,6 +4,9 @@ import AtomInput from '../../atom/Input/index.vue'
 import { useLogin } from '../../../composables/UseLogin';
 import { ref } from 'vue';
 import { sessionStore }  from '../../../stores/session'
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
 
 const storeSession = sessionStore()
 
@@ -31,7 +34,7 @@ const submit = async () => {
    if(loginResponse.status === 'success'){
     formStateValid.value = true
     updateStore(loginResponse)
-
+    router.push('/home')
    }else{
         formStateValid.value = false
    }
